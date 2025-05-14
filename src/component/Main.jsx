@@ -130,21 +130,24 @@ const sliderSettings = {
      onClick={myFun}>Search</button>
      
     </div>
-    <h2 style={{color:'rgb(218, 235, 187)',textWrap:'Wrap'}}>Unleash the Chef in You - One Recipe at a Time</h2>
+   <div style={{backgroundColor:'rgb(229, 238, 224)',padding:'4px',display:'flex',flexWrap:'wrap'}}><h2 style={{color:'rgb(26, 38, 4)',textWrap:'Wrap'}}>Unleash the Cheaf in You _ One Recipe at a Time</h2></div> 
     <h4 className="msg">{msg}</h4>
     <div>
       <Mealcards  details={data}/>
       <div className="categories">
-        <h1 style={{color:'rgb(218, 235, 187)',textWrap:'Wrap'}}>Categories:</h1>
+        <div style={{backgroundColor:'rgb(229, 238, 224)'}}><h1 style={{color:'rgb(26, 38, 4)',textWrap:'Wrap'}}>Categories</h1></div>
+        <div className="item">
           {categories.map((cat) => (
             <button
               key={cat.idCategory}
               className="category-btn"
               onClick={() => fetchCategory(cat.strCategory)}
             >
-              {getEmoji(cat.strCategory)} <p style={{fontSize:'15px' ,padding:'4px'}}>{cat.strCategory}</p>
+              {getEmoji(cat.strCategory)} <p style={{fontSize:'15px' ,padding:'4px',fontWeight:'bold'}}>{cat.strCategory}</p>
             </button>
           ))}
+        </div>
+          
         </div>
      
     </div>

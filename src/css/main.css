@@ -14,9 +14,8 @@
     align-items: center;
     justify-content: center;
     row-gap: 20px;
-    padding-top: 30px;
     flex-wrap: wrap;
-    background-image: url(/table.jpg);
+    background-image: url(/strawberry.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -24,9 +23,10 @@
 }
 
 #heading{
-    color:rgb(218, 235, 187);
+    color:rgb(56, 83, 10);
      font-weight: 500px;
      font-size: 45px;
+     
 }
 .searchbar{
   display: flex;
@@ -57,25 +57,35 @@
   font-size: 20px;
   border-radius: 6px;
   cursor: pointer;
+  font-weight: 400px;
 }
 .msg{
-  color:rgb(218, 235, 187);
+  color:rgb(50, 76, 5);
+
 }
 .categories {
-  padding:0 50px;
+  padding:0 20px;
   display: flex;
-  
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-
+  align-items: center;
+  row-gap: 10px;
+}
+.item{
+    padding:0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .category-btn {
   height:80px;
-  width:100px;
-  background-color: #a19d9d59;
-  color: rgb(190, 225, 172);
+  width:110px;
+  background-color: #3f5231ae;
+  color: rgb(229, 238, 224);
   border: none;
   padding: 8px 5px;
   border-radius: 10px;
