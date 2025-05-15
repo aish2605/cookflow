@@ -94,7 +94,7 @@ const sliderSettings = {
   infinite: true,
   speed: 300,
   autoplay: true,
-  autoplaySpeed: 2500,
+  autoplaySpeed: 1000,
   arrows: false,
    slidesToShow: 1,
   slidesToScroll: 1,
@@ -130,12 +130,12 @@ const sliderSettings = {
      onClick={myFun}>Search</button>
      
     </div>
-   <div style={{backgroundColor:'rgb(229, 238, 224)',padding:'4px',display:'flex',flexWrap:'wrap'}}><h2 style={{color:'rgb(26, 38, 4)',textWrap:'Wrap'}}>Unleash the Cheaf in You _ One Recipe at a Time</h2></div> 
+   <div style={{backgroundColor:'rgb(229, 238, 224)',padding:'2px',display:'flex',flexWrap:'wrap'}}><h3 style={{color:'rgb(26, 38, 4)',textWrap:'Wrap'}}>"Flavor at Your Fingertips"</h3></div> 
     <h4 className="msg">{msg}</h4>
     <div>
       <Mealcards  details={data}/>
       <div className="categories">
-        <div style={{backgroundColor:'rgb(229, 238, 224)'}}><h1 style={{color:'rgb(26, 38, 4)',textWrap:'Wrap'}}>Categories</h1></div>
+        <div style={{backgroundColor:'rgb(229, 238, 224)',padding:'5px',borderRadius:'3px'}}><h1 style={{color:'rgb(26, 38, 4)',textWrap:'Wrap'}}>Categories</h1></div>
         <div className="item">
           {categories.map((cat) => (
             <button
