@@ -3,6 +3,7 @@ import './component/Main.jsx'
 import Main from './component/Main';
 import {Route,Routes} from 'react-router-dom';
 import MealInfo from './component/MealInfo';
+import Video from './component/video';
 
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
     <Route  path='/' element={<Main/>}/>
    
     <Route  path='/:mealId' element={<MealInfo/>}/>
+
+    <Route path ="/video" element={<Video/>}/>
    </Routes>
    
     </>

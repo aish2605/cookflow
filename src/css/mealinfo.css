@@ -4,6 +4,7 @@
     width:100vw;
      min-height: 100vh;
     display: flex;
+   
     align-items: center;
     justify-content: center;
     column-gap: 70px;
@@ -29,18 +30,31 @@
     justify-content: center;
 
 }
-.child1 button{
+.child1 span{
     height:fit-content;
     width:fit-content;
     padding:5px;
-    background-color: rgb(255, 255, 255);
     color:rgb(26, 67, 13);
     border-radius: 5px;
     border: none;
-    cursor: pointer;
+    
     font-weight: 400px;
     outline: none;
+    font-size: 30px;
+}
+.child1 button{
+    width:fit-content;
+    height:40px;
+    background-color: rgb(26, 47, 205);
+    color:white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 10px;
     font-size: 20px;
+    font-weight: 400px;
+    padding:10px;
+
 }
 .child2 {
      align-items: center;

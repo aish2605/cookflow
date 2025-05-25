@@ -1,11 +1,14 @@
 import React ,{useState,useEffect} from 'react'
-import {useParams,useLocation} from 'react-router-dom';
+import {useParams,useLocation,useNavigate} from 'react-router-dom';
+
 import '../css/mealinfo.css'
 
 
 function MealInfo() {
     const{mealId}=useParams();
     const [info,setInfo]=useState(null)
+  
+    const navigate = useNavigate();
     console.log(mealId);
   
 useEffect(()=>{
@@ -15,6 +18,7 @@ useEffect(()=>{
       .then(result=>{
          console.log(result.meals[0])
          setInfo(result.meals[0])
+       
       })
     }
     
@@ -38,15 +42,25 @@ useEffect(()=>{
 };
 const ingredientsList = getIngredients(info);
 
+const managePlayVideo =() =>{
+  navigate("/video",{state:{url:info.strYoutube}});
+}
+
   return (
     <>
    
        {
         !info ? "Not Found" :    <div className="meal">
+        
+          
         <img className="img" src={info.strMealThumb}/>
+
+        
         <div className="child1">
             <h1>Recipe Details</h1>
-            <button>{info.strMeal}</button>
+            <span>{info.strMeal}</span>
+            <button onClick={managePlayVideo} >Watch video</button>
+             
             <h3>Ingridents</h3>
           <ul>
             {ingredientsList.map((item,index)=>(<li key={index}>{item}</li>))}
@@ -57,7 +71,10 @@ const ingredientsList = getIngredients(info);
        
         <div className="child2"> 
            <h1>Instructions</h1> 
-           <p>{info.strInstructions}</p></div>
+           
+           <p>{info.strInstructions}</p>
+           </div>
+        
   </div>
     }
   
